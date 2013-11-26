@@ -1,0 +1,3 @@
+1.将MapApi.jar放到工程libs目录下；如果需要使用矢量地图，将libminimapv320.so放到libs下的armeabi目录下。
+2.在工程Build Path>Configure Build Path…>libraries 中选择“Add Externel JARs…”，选定MapApi.jar，点击OK，这样就可以将高德地图Android API 库文件引入。然后在工程Build Path>Configure Build Path…>Order and Export 中将引入的库文件MapApi.jar 选中（在Android2.2及以前的版本中必须选中，否则会有问题），点击OK。
+3.如果遇到问题，可以上问答社区http://api.amap.com/qa/。

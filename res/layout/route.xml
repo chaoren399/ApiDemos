@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:autonavi="http://schemas.android.com/apk/res/com.amap"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+	<com.amap.mapapi.map.MapView android:id="@+id/route_MapView"
+		android:layout_width="fill_parent" android:layout_height="fill_parent" 
+		android:clickable="true"    
+	
+	/>
+	
+	<RelativeLayout android:gravity="center"
+		android:id="@+id/RelativeLayout_roadsearch_top" android:background="@drawable/search_plate_global"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_alignParentTop="true">
+		<ImageButton android:id="@+id/imagebtn_roadsearch_startoption"
+			android:background="@android:color/transparent" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginTop="6.0dip"
+			android:layout_marginRight="10.0dip" android:src="@drawable/btn_nav_drag_down"
+			android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+		<ImageButton android:id="@+id/imagebtn_roadsearch_goalsoption"
+			android:background="@android:color/transparent" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginTop="8.0dip"
+			android:layout_marginRight="10.0dip" android:src="@drawable/btn_nav_drag_down"
+			android:layout_below="@id/imagebtn_roadsearch_startoption"
+			android:layout_alignParentRight="true" />
+		<AutoCompleteTextView 
+			android:textSize="16.0sp" android:id="@+id/autotextview_roadsearch_start"
+			android:background="@drawable/text_search" android:paddingRight="37.0dip"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_marginLeft="5.0dip" android:hint="起点:"
+			android:singleLine="true" android:maxLength="20"
+			android:layout_toLeftOf="@id/imagebtn_roadsearch_startoption"
+			android:layout_alignTop="@id/imagebtn_roadsearch_startoption"
+			android:imeOptions="actionDone" android:dropDownVerticalOffset="1.0dip"
+			android:inputType="text|textAutoComplete" />
+		<AutoCompleteTextView
+			android:textSize="16.0sp" android:id="@+id/autotextview_roadsearch_goals"
+			android:background="@drawable/text_search" android:paddingRight="37.0dip"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_marginLeft="5.0dip" android:hint="终点:"
+			android:singleLine="true" android:maxLength="20"
+			android:layout_toLeftOf="@id/imagebtn_roadsearch_goalsoption"
+			android:layout_alignTop="@id/imagebtn_roadsearch_goalsoption"
+			android:imeOptions="actionDone" android:dropDownVerticalOffset="1.0dip"
+			android:inputType="text|textAutoComplete" />
+		<LinearLayout android:orientation="horizontal"
+			android:id="@+id/btn_layout" android:paddingBottom="10.0dip"
+			android:layout_width="fill_parent" android:layout_height="48.0dip"
+			android:layout_marginLeft="10.0dip" android:layout_marginTop="6.0dip"
+			android:layout_marginRight="6.0dip" android:layout_below="@id/imagebtn_roadsearch_goalsoption">
+			<LinearLayout android:orientation="horizontal"
+				android:layout_width="fill_parent" android:layout_height="fill_parent"
+				android:layout_weight="2.0">
+				
+						
+				<Button android:id="@+id/imagebtn_roadsearch_tab_transit"
+					android:background="@drawable/mode_transit"
+					android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:layout_weight="1.0" />
+				
+				<Button android:id="@+id/imagebtn_roadsearch_tab_driving"
+					android:background="@drawable/mode_driving"
+					android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:layout_weight="1.0" />
+				
+				<Button android:id="@+id/imagebtn_roadsearch_tab_walk"
+					android:background="@drawable/mode_walk" android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:layout_weight="1.0" />
+			</LinearLayout>
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:layout_marginLeft="10.0dip"
+				android:layout_weight="3.0" android:layout_alignParentRight="true">
+			     <ImageButton android:id="@+id/imagebtn_roadsearch_search"
+					android:background="@drawable/btn_default_small"
+					android:layout_width="fill_parent" android:layout_height="41.0dip"
+					android:src="@drawable/btn_poi_search_normal" />
+			</LinearLayout>
+		</LinearLayout>
+	</RelativeLayout>
+</FrameLayout>
+
+ 

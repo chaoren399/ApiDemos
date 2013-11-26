@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:autonavi="http://schemas.android.com/apk/res/com.amap"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+	<com.amap.mapapi.map.MapView android:id="@+id/poisearch_MapView"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:clickable="true"  />
+
+	<LinearLayout android:gravity="center_vertical"
+		android:orientation="horizontal" android:id="@+id/search_edit_frame"
+		android:background="@drawable/search_plate_global"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_marginBottom="-12.0dip" android:layout_alignParentLeft="true"
+		android:layout_alignParentTop="true">
+		<TextView android:textSize="16.0sp" android:gravity="center_vertical"
+			android:layout_gravity="center_vertical" android:id="@+id/TextViewSearch"
+			android:background="@drawable/btn_map_poi" android:clickable="true"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_marginLeft="9.0dip"  android:layout_marginRight="9.0dip" android:layout_marginTop="3.0dip"
+			android:layout_marginBottom="2.0dip" android:text=" AMAP"
+			android:singleLine="true" android:drawableLeft="@drawable/icon_poisearch"
+			android:layout_weight="1.0" />
+			<Button android:id="@+id/next"
+					android:text="下一页"
+					android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:layout_weight="1.0" />	
+	</LinearLayout>
+
+</FrameLayout>
+
+ 

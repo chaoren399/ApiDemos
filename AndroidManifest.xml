@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.amap.cn.apis"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="4" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="16a2cac07735891e696274d706149233" />
+
+        <provider
+            android:name="com.amap.cn.apis.poisearch.MySuggestionProvider"
+            android:authorities="com.amap.cn.apis.poisearch.MySuggestionProvider"
+            android:exported="true" >
+        </provider>
+
+        <activity
+            android:name=".ApiDemos"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mapview.GridMapView"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/mapview_gridMapView" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.AMAP_DEMO" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mapview.VectorMapView"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/mapview_vectorMapView" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.AMAP_DEMO" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".geocoder.GeocoderDemo"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/geocoder_Geocoder" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.AMAP_DEMO" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".route.RouteDemo"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/route_Route"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.AMAP_DEMO" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".location.MyLocation"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/location_MyLocation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.AMAP_DEMO" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".location.LocationManager"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/location_LocationManager" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.AMAP_DEMO" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".poisearch.PoiSearchDemo"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/poisearch_PoiSearch"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.SEARCH" >
+                </action>
+
+                <category android:name="android.intent.category.AMAP_DEMO" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" >
+            </meta-data>
+        </activity>
+        <activity
+            android:name=".overlay.ItemizedOverlayDemo"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/overlay_ItemizedOverlay" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.AMAP_DEMO" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".overlay.OverlayDemo"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/overlay_Overlay" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.AMAP_DEMO" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".overlay.MyLocationOverlayDemo"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/overlay_MyLocationOverlay" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.AMAP_DEMO" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.amap.cn.apis.traffic.TrafficDemo"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/traffic_Traffic" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.AMAP_DEMO" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.amap.cn.apis.busline.BusLineSearchDemo"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/busline_search" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.AMAP_DEMO" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.amap.cn.apis.offlinemap.OfflineMapDemo"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/offlinemap" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.AMAP_DEMO" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

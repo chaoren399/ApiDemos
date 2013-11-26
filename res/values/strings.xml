@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AMap ApiDemos</string>
+    <string name="geocoder_Geocoder">Geocoder</string>
+    <string name="mapview_vectorMapView">MapView/VectorMapView</string>
+    <string name="mapview_gridMapView">MapView/GridMapView</string>
+    <string name="route_Route">Route</string>
+    <string name="poisearch_PoiSearch">PoiSearch</string>
+    <string name="location_MyLocation">Location/MyLocation</string>
+    <string name="location_LocationManager">Location/LocationManager</string>
+    <string name="overlay_ItemizedOverlay">Overlay/ItemizdOverlayDemo</string>
+    <string name="overlay_MyLocationOverlay">Overlay/MyLocationOverlay</string>
+    <string name="overlay_Overlay">Overlay/MyOverlay</string>
+    <string name="traffic_Traffic">Traffic</string>
+    <string name="busline_search">BusLine Search</string>
+    <string name="offlinemap">OfflineMap</string>
+    <string name="search_title">搜索关键字</string>
+    <string name="location">定位中，请等待...</string>
+    <string name="real_time_traffic">实时路况</string>
+    <string name="choose_layer">选择图层</string>
+    <string name="alert_dialog_cancel">取消</string>
+    
+    
+    
+</resources>
